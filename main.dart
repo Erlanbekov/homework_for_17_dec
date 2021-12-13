@@ -179,33 +179,16 @@
     
 //   }
 //     }
-// void main() {
-  
-//   var s = [4, 4, 4, 4, 4];
-  
-//   var c = 0;
-  
-//   for (var a =0; a < s.length;a++ ) {
-//     c = c + s[a];
-    
-//   }
-//   print(c);
-import 'dart:io';
-
 void main() {
   
-print('Введите число');
-var n = stdin.readLineSync()!;
-print('Введите число');
-var c = stdin.readLineSync()!;
-
-var d = [];
-
-  if (var d = n + c ) {
-    print(d)
+  var s = [4, 4, 4, 4, 4];
+  
+  var c = 0;
+  
+  for (var a =0; a < s.length;a++ ) {
+    c = c + s[a];
     
   }
- print()
- a.sort();
- print(a);
- }
+  print(c);
+}
+//5
