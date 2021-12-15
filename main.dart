@@ -1,4 +1,4 @@
-// import 'dart:io';
+import 'dart:io';
 // void main() {
   
 //  print('Напишите свою 1 числу');
@@ -178,17 +178,76 @@
 //     print('Резултат $plus');
     
 //   }
-//     }
-void main() {
+// //     }
+// void main() {
   
-  var s = [4, 4, 4, 4, 4];
+//   var s = [4, 4, 4, 4, 4];
   
-  var c = 0;
+//   var c = 0;
   
-  for (var a =0; a < s.length;a++ ) {
-    c = c + s[a];
+//   for (var a =0; a < s.length;a++ ) {
+//     c = c + s[a];
     
+//   }
+//   print(c);
+// }
+
+void main() {
+
+  print('скопку мне:');
+  var s = stdin.readLineSync()!;
+
+
+  List openers = ['(', '[', '{'];
+  List closers = [')', ']', '}'];
+
+  List Stack = [];
+  
+  s.split(''); // ( [ [ } } ) ) ] ] 
+  for (int i = 0; i < s.length; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (s[i] == openers[j]) {
+        Stack.add(i);
+
+      }
+      if (s[i] == closers[j] && j == Stack.last) {
+        Stack.removeLast();
+      }
+    }
   }
-  print(c);
+  if (Stack.isEmpty) {
+    print(true);
+  } else {
+    print(false);
+  }
 }
-//5
+// print('скопку мне:');
+//   var s = stdin.readLineSync()!;
+
+//   if (s == '()' ||
+//       s == '[]' ||
+//       s == '{}' ||
+//       s == '{()}' ||
+//       s == '({})' ||
+//       s == '{[]}' ||
+//       s == '[{}]' ||
+//       s == '([])' ||
+//       s == '[()]' ||
+//       s == '()[]{}' ||
+//       s == '[](){}' ||
+//       s == '{}[]()' ||
+//       s == '[]{}()' ||
+//       s == '{}()[]' ||
+//       s == '(){}[]' ||
+//       s == '[](){}') {
+//     print(true);
+//   } else if (s[0] == ')' && (s[0] == '(')) {
+//     print('false');
+//   } else if (s[0] == ']' && (s[0] == '[')) {
+//     print('false');
+//   } else if (s[0] == '}' && (s[0] == '{')) {
+//     print(false);
+//   } else {
+//     print(false);
+//   }
+// }
