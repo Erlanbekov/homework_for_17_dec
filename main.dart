@@ -179,48 +179,49 @@ import 'dart:io';
     
 //   }
 // //     }
-// void main() {
-  
-//   var s = [4, 4, 4, 4, 4];
-  
-//   var c = 0;
-  
-//   for (var a =0; a < s.length;a++ ) {
-//     c = c + s[a];
-    
-//   }
-//   print(c);
-// }
 
 void main() {
-
-  print('скопку мне:');
-  var s = stdin.readLineSync()!;
-
-
-  List openers = ['(', '[', '{'];
-  List closers = [')', ']', '}'];
-
-  List Stack = [];
   
-  s.split(''); // ( [ [ } } ) ) ] ] 
-  for (int i = 0; i < s.length; i++) {
-    for (int j = 0; j < 3; j++) {
-      if (s[i] == openers[j]) {
-        Stack.add(i);
-
-      }
-      if (s[i] == closers[j] && j == Stack.last) {
-        Stack.removeLast();
-      }
-    }
+  var s = [4, 4, 4, 4, 4];
+  
+  var c = 0;
+  
+  for (var a =0; a < s.length;a++ ) {
+    c = c + s[a];
+    
   }
-  if (Stack.isEmpty) {
-    print(true);
-  } else {
-    print(false);
-  }
+  print(c);
 }
+
+// void main() {
+
+//   print('скопку мне:');
+//   var s = stdin.readLineSync()!;
+
+
+//   List openers = ['(', '[', '{'];
+//   List closers = [')', ']', '}'];
+
+//   List Stack = [];
+  
+//   s.split(''); // ( [ [ } } ) ) ] ] 
+//   for (int i = 0; i < s.length; i++) {
+//     for (int j = 0; j < 3; j++) {
+//       if (s[i] == openers[j]) {
+//         Stack.add(i);
+
+//       }
+//       if (s[i] == closers[j] && j == Stack.last) {
+//         Stack.removeLast();
+//       }
+//     }
+//   }
+//   if (Stack.isEmpty) {
+//     print(true);
+//   } else {
+//     print(false);
+//   }
+// }
 // print('скопку мне:');
 //   var s = stdin.readLineSync()!;
 
